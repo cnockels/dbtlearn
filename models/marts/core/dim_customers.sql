@@ -2,30 +2,15 @@
     materialized="table"
 )}}
 
-WITH Customers 
+
+WITH customers
 AS
-(
-    SELECT 
-ID as customer_id,
-first_name,
-LAST_NAME
+(SELECT * FROM {{ref('stg_customers')}}),
 
-FROM 
-`macro-landing-333115.dbt_cnockels.customers`
-),
-
-ORDERS
+orders 
 AS
-(
-    SELECT 
-    ID as order_id,
-    user_id as customer_id,
-    order_date,
-    status 
+(SELECT * FROM {{ref('stg_orders')}}),
 
-    FROM `macro-landing-333115.dbt_cnockels.orders`
-
-),
 customer_orders 
 AS 
 (
