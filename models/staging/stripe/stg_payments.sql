@@ -1,0 +1,1 @@
+SELECT * FROM `macro-landing-333115.dbt_cnockels.payment` 
