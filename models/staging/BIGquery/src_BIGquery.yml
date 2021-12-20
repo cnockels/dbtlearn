@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+    name: BIGquery
+    database: dbt_cnockels
+    schema: BIGquery
+    tables: 
+      name: customers
+      name: orders
