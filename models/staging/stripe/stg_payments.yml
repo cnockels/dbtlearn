@@ -1,5 +1,4 @@
-version 1:
-
+version: 2
 name: stg_payment
 description: "All payment data for customers found in the orders table"
 columns:
