@@ -1,8 +1,7 @@
 version: 2
 
-Models:
+models:
   - name: stg_orders
-    description: All orders data
     columns:
       - name: status
         tests: 
