@@ -14,7 +14,7 @@ B.amount
 FROM 
 orders as A 
 LEFT JOIN 
-`macro-landing-333115.dbt_cnockels.payment` as B on A.order_id = B.orderid
+{{ref('stg_payments')}} as B on A.order_id = B.orderid
 )
 
 SELECT * FROM amount

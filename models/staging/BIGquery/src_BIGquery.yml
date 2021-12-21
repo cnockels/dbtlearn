@@ -1,9 +1,13 @@
 version: 2
 
 sources:
-    name: BIGquery
-    database: dbt_cnockels
-    schema: BIGquery
+  - name: BIGquery
+    database: macro-landing-333115
+    schema: dbt_cnockels
     tables: 
-      name: customers
-      name: orders
+      - name: customers
+      - name: orders
+        loaded_at_field: _etl_loaded_at
+        freshness: 
+            warn_after: {count: 12, period: hour}
+            error_after: {count: 24, period: hour}

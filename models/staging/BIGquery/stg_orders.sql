@@ -7,7 +7,7 @@ AS
     order_date,
     status 
 
-    FROM `macro-landing-333115.dbt_cnockels.orders`
+    FROM {{source('BIGquery', 'orders')}}
 )
 
 SELECT * FROM orders
