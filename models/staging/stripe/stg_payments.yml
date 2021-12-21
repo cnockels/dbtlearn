@@ -1,7 +1,7 @@
 version: 2
 
 MODELS:
-    - name: stg_payment
+    - name: stg_payment.sql
     description: "All payment data for customers found in the orders table"
     columns:
         - name: payment_id
