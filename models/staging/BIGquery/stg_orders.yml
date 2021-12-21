@@ -1,0 +1,15 @@
+version: 2
+
+Models:
+  - name: stg_orders
+    description: All orders data
+    columns:
+      - name: status
+        tests: 
+          - accepted_values:
+              values:
+                - completed
+                - shipped
+                - returned
+                - return_pending
+                - placed
