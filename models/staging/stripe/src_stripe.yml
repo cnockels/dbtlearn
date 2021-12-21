@@ -7,19 +7,4 @@ sources:
     tables: 
       - name: payment
         description: "All payment data for customers found in the orders table"
-        columns:
-          - name: payment_id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
-          - name: orderid
-            description: "Payment secondary key, Orders primary key"
-          - name: payment_method 
-            description: "Method used for payment"
-          - name: status
-            description: "whether payment went through, or not"
-          - name: amount
-            description: "Total dollar amount of payment"
-          - name: created_at
-            description: "Date the transaction was created"
+        
