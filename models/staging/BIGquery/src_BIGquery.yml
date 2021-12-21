@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: BIGquery
+    description: Clone of BIGquery database
     database: macro-landing-333115
     schema: dbt_cnockels
     tables: 
@@ -13,8 +14,6 @@ sources:
             tests: 
               - unique
               - not_null
-
-
       - name: orders
         description: Raw orders data
         columns:
