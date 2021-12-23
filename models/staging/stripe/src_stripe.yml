@@ -1,0 +1,9 @@
+version: 2
+sources:
+  - name: stripe
+    database: macro-landing-333115
+    schema: dbt_cnockels
+    tables: 
+      - name: payment
+        description: "All payment data for customers found in the orders table"
+        

@@ -1,0 +1,24 @@
+version: 2
+
+sources:
+  - name: BIGquery
+    description: Clone of BIGquery database
+    database: macro-landing-333115
+    schema: dbt_cnockels
+    tables: 
+      - name: customers
+        description: Raw customer data
+        columns:
+          - name: id
+            description: Primary key for customers
+            tests: 
+              - unique
+              - not_null
+      - name: orders
+        description: Raw orders data
+        columns:
+          - name: id
+            description: Primary key for orders
+            tests: 
+              - unique
+              - not_null
